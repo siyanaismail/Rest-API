@@ -2,18 +2,18 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# In-memory user store
+# memory 
 users = {
     1: {"name": "Jhon", "email": "jhon@gmail.com"},
     2: {"name": "Alice", "email": "alice@gmail.com"},
 }
 
-# GET all users
+# GET all
 @app.route('/users', methods=['GET'])
 def get_users():
     return jsonify(users)
 
-# GET a specific user
+# GET user
 @app.route('/users/<int:user_id>', methods=['GET'])
 def get_user(user_id):
     user = users.get(user_id)
@@ -21,7 +21,7 @@ def get_user(user_id):
         return jsonify({"error": "User not found"}), 404
     return jsonify(user)
 
-# POST - create a new user
+# POST (create user)
 @app.route('/users', methods=['POST'])
 def create_user():
     data = request.get_json()
@@ -32,7 +32,7 @@ def create_user():
     users[new_id] = {"name": data["name"], "email": data["email"]}
     return jsonify({"id": new_id, "message": "User created successfully"}), 201
 
-# PUT - update an existing user
+# PUT (update user)
 @app.route('/users/<int:user_id>', methods=['PUT'])
 def update_user(user_id):
     data = request.get_json()
@@ -45,7 +45,7 @@ def update_user(user_id):
     })
     return jsonify({"message": "User updated successfully"})
 
-# DELETE - delete a user
+# DELETE (delete user)
 @app.route('/users/<int:user_id>', methods=['DELETE'])
 def delete_user(user_id):
     if user_id not in users:

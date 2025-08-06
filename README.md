@@ -1,15 +1,15 @@
 # Flask REST API - User Management
 
-This is a simple REST API built using **Python Flask** to manage user data with basic **CRUD** operations (Create, Read, Update, Delete).  
+This is a simple REST API built using **Python Flask** to manage user data with basic operations (Create, Read, Update, Delete).  
 The user data is stored in an **in-memory dictionary**, which means it resets every time the server restarts.
 
 ## Features
 
-✅ Get all users  
-✅ Get a specific user by ID  
-✅ Add a new user  
-✅ Update existing user  
-✅ Delete a user  
+ Get all users  
+ Get a specific user by ID  
+ Add a new user  
+ Update existing user  
+ Delete a user  
 
 ## Tech Stack
 
