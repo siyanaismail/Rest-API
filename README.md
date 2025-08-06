@@ -23,7 +23,7 @@ The user data is stored in an **in-memory dictionary**, which means it resets ev
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+source venv\Scripts\activate
 ```
 
 ### 2. Install Dependencies
