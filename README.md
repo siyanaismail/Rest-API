@@ -19,20 +19,13 @@ The user data is stored in an **in-memory dictionary**, which means it resets ev
 
 ##  How to Run This App
 
-### 1. Create a Virtual Environment (Optional but Recommended)
-
-```bash
-python -m venv venv
-source venv\Scripts\activate
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```bash
 pip install flask
 ```
 
-### 3. Run the Flask App
+### 2. Run the Flask App
 
 ```bash
 python app.py
