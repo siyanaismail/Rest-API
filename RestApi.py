@@ -54,5 +54,4 @@ def delete_user(user_id):
     del users[user_id]
     return jsonify({"message": "User deleted successfully"})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run(debug=True)
